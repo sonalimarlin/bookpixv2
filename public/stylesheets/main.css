@@ -1,0 +1,29 @@
+.thumbnail img {
+  width: 80%;
+  padding: 10px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.list-group {
+  padding: 10px;
+}
+
+.jumbotron {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.jumbotron h1 {
+  font-size: 40px;
+}
+
+.delete-form {
+    display: inline;
+}

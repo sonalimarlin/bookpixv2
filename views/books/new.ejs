@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <h1>
+  Submit a New Book!
+</h1>
+  <form action="/books" method="POST">
+    <div class="form-group">
+      <label for="isbn">Book ISBN Number</label>
+      <input class="form-control" type="text" name="isbn" placeholder="add book ISBN-10 number ex: 0735211205">
+    </div>
+    <div class="form-group">
+      <label for="title">Book Title</label>
+      <input class="form-control" type="text" name="title" placeholder="add book title">
+    </div>
+    <div class="form-group">
+      <label for="author">Book Author</label>
+      <input class="form-control" type="text" name="author" placeholder="author name">
+    </div>
+    <div class="form-group">
+      <label for="image">Book Cover Image URL</label>
+      <input class="form-control" type="text" name="image" placeholder="url of the book cover image">
+    </div>
+    <div class="form-group">
+      <label for="description">Book Description / Synopsis</label>
+      <textarea class="form-control" name="description" rows="5" placeholder="enter book description..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <br>
+    <a href="/books" class="btn btn-large btn-primary">Cancel</a>
+</div>
+
+<% include ../partials/footer %>
