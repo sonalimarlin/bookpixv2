@@ -17,12 +17,12 @@
     <div class="col-md-8">
         <div class="thumbnail">
           <div class="caption">
-            <h5 class="pull-right"><strong><%=book.author%></strong></h5>
+            <h5 class="pull-right"><strong>Author: <%=book.author%></strong></h5>
             <h4><%=book.title%></h4>
             <p><%=book.description%></p>
             <p>ISBN-10 Number: <%=book.isbn%></p>
             <p>
-              <em>Submitted by: <%= book.user.username %>, <%= moment(book.createdAt).fromNow() %></em>
+              <em>Submitted by: <a href="/users/<%= book.user.id %>"><%= book.user.username %></a>, <%= moment(book.createdAt).fromNow() %></em>
             </p>
             
             <% if(currentUser && book.user.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>

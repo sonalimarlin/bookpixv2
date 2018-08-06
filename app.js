@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
-//mongoose.connect('mongodb://localhost/book_pix');
-mongoose.connect('mongodb://rusty:password@ds219098.mlab.com:19098/bookpix');
+mongoose.connect('mongodb://localhost/book_club_enh');
+//mongoose.connect('mongodb://rusty:password@ds219098.mlab.com:19098/bookpix');
 
 app.locals.moment = require('moment');
 // PASSPORT CONFIGURATION

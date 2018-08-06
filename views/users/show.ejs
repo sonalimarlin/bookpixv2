@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2><%= user.firstName%> <%= user.lastName%></h2>
+      <img src="<%= user.avatar %>" height="250px" alt="user profile image">
+      <p>
+        Email: <a href="mailto:<%= user.email %>"><%= user.email %></a>
+      </p>
+    </div>
+    
+    <div class="col-md-8">
+      <h2>
+           <%= user.firstName%>'s Book Selections:
+      </h2>
+      <% books.forEach(function(book) { %>
+        <a href="/books/<%= book.id %>"><img src=" <%= book.image %> " height="250px" alt="book cover image"></a>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
